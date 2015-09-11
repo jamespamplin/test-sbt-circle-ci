@@ -1,0 +1,4 @@
+machine:
+  timezone: UTC
+  java:
+    version: openjdk8
