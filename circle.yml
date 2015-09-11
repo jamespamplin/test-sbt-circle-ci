@@ -4,13 +4,13 @@ machine:
     version: oraclejdk8
 
 dependencies:
+  cache_directories:
+    - "target/resolution-cache"
+    - "project/target/resolution-cache"
   override:
     - sbt test:compile
 
 test:
-  cache_directories:
-    - "target/resolution-cache"
-    - "project/target/resolution-cache"
   override:
     - sbt test
   post:
