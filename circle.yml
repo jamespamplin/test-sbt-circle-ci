@@ -2,3 +2,13 @@ machine:
   timezone: UTC
   java:
     version: oraclejdk8
+
+dependencies:
+  override:
+    - sbt test:compile
+
+test:
+  override:
+    - sbt test
+  post:
+    - sbt dist
