@@ -3,6 +3,10 @@ machine:
   java:
     version: oraclejdk8
 
+  # Double heap memory for potentially faster compile times
+  environment:
+    SBT_OPTS: "-XX:+CMSClassUnloadingEnabled -Xms3072m -Xmx3072m -XX:MaxPermSize=768m -XX:ReservedCodeCacheSize=384m -Dfile.encoding=UTF8"
+
 # Collect build artifacts
 general:
   artifacts:
